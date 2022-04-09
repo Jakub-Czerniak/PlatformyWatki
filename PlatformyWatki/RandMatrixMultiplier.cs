@@ -77,6 +77,14 @@ namespace PlatformyWatki
                     Console.Write(i + " ");
                 Console.WriteLine();
             }
+
+            Console.WriteLine("Result Matrix:");
+            foreach (List<int> sublist in result)
+            {
+                foreach (int i in sublist)
+                    Console.Write(i + " ");
+                Console.WriteLine();
+            }
         }
     }
 }
