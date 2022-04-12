@@ -37,27 +37,67 @@ namespace PlatformyWatki
                     m2[i].Add(j);
                 }
             }
+  
+            result = new List<List<int>>();
+            result.Capacity = size;
+            for (int i = 0; i < size; i++)
+            {
+                result.Add(new List<int>());
+            }
         }
 
         public void Odd()
         {
-            
+            int rslt = 0;
+            for (int i = 1; i < size; i=i+2)
+            {
+                
+                for (int j = 0; j < size; j ++)
+                {
+                    rslt = 0;
+                    for (int k = 0; k < size; k++)
+                    {
+                        rslt += m[i][k] * m2[k][j];
+                    }                                               
+                result[i].Add(rslt);
+                }
+            }
         }
 
         public void Even()
         {
-            Console.WriteLine("Even");
+            int rslt = 0;
+            for (int i = 0; i < size; i=i+2)
+            {
+                for (int j = 0; j < size; j++)
+                {
+                    rslt = 0;
+                    for (int k = 0; k < size; k++)
+                    {
+                        rslt += m[i][k] * m2[k][j];
+                    }    
+                result[i].Add(rslt);
+                }
+            }
         }
 
         public void Whole()
-        { 
-            result = new List<List<int>>();
-             
+        {
+            int rslt=0;
+    
             for (int i = 0; i<size; i++)
+            {
+                result.Add(new List<int>()); 
                 for(int j =0; j<size; j++)
                 {
-                    //result.Add();
+                    rslt = 0;
+                    for (int k=0; k<size; k++)
+                    {
+                        rslt += m[i][k] * m2[k][j];
+                    }
+                    result[i].Add(rslt);
                 }
+            }
         }
 
         public void Display()

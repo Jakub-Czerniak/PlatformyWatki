@@ -7,8 +7,8 @@ namespace PlatformyWatki
     {
         static void Main()
         {
-            RandMatrixMultiplier m = new RandMatrixMultiplier(3);
-            /*var watch = System.Diagnostics.Stopwatch.StartNew();
+            RandMatrixMultiplier m = new RandMatrixMultiplier(1000);
+            var watch = System.Diagnostics.Stopwatch.StartNew();
             Thread[] threads = new Thread[2];
             threads[0] = new Thread(m.Odd);
             threads[1] = new Thread(m.Even);
@@ -24,8 +24,7 @@ namespace PlatformyWatki
             m.Whole();
             elapsedMs = watch.ElapsedMilliseconds;
             Console.WriteLine("No threads: " + elapsedMs + " ms");
-            */
-            m.Display();
+
         }
     
     }
